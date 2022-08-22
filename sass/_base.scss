@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    width: 1740px;
+    font-family: sans-serif;
+}
+li , ul , ol{
+    list-style: none;
+    text-decoration: none;
+}
+input:focus{
+    outline: none;
+}
+input{
+    border: none;
+}
+a{
+    cursor: pointer;
+}

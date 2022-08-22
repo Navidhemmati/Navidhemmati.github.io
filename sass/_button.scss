@@ -1,0 +1,73 @@
+@mixin tag-button {
+    width: 200px;
+    height: 56px;
+    border-radius: 12px;
+    background-color: $primary-500;
+    color: #FFFFFF;
+    flex-direction: row-reverse;
+    border: none;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+
+@mixin offer-button{
+    width: 32px;
+        height: 20px;
+        background-color: $primary-500;
+        color: #ffffff;
+        border-radius: 4px;
+        Font-family: IRANSansXFaNum;
+        Font-style: Bold;
+        Font-size: 16px;
+        Line-height: 22px;
+        font-weight: 500;
+}
+@mixin new-view {
+    width:236px ;
+    height: 48px;
+    background-color:$primary-100 ;
+    color:$primary-700 ;
+    border-radius: 12px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    border: none;
+    outline: none;
+    
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+@mixin view-buyer {
+    width: 44px;
+    height: 24px;
+    background-color:$primary-100 ;
+    color: $primary-700;
+    border-radius: 8px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin view-wait {
+    width: 78px;
+    height: 24px;
+    background-color:$warning-100 ;
+    color:$warning-900;
+    border-radius:8px ;
+    font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 19px;
+@include flex;
+
+    
+}
