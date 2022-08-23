@@ -464,6 +464,7 @@ line-height: 22px;
 // end description-section
 // start products 
 .products{
+    position: relative;
     height: 586.4px;
     background-color: #F2F4F5;
     @include flex;
@@ -791,3 +792,10 @@ footer{
     column-gap: 30px;
 }
 // end footer
+
+@media screen and (max-width:1199.98px){
+    body{
+        width: 1440px;
+    }
+    
+}

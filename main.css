@@ -7,6 +7,7 @@
 body {
   width: 1740px;
   font-family: sans-serif;
+  margin: auto;
 }
 
 li, ul, ol {
@@ -545,6 +546,7 @@ nav {
 }
 
 .products {
+  position: relative;
   height: 586.4px;
   background-color: #F2F4F5;
   display: flex;
@@ -931,4 +933,10 @@ footer {
   display: flex;
   -moz-column-gap: 30px;
        column-gap: 30px;
+}
+
+@media screen and (max-width: 1199.98px) {
+  body {
+    width: 1440px;
+  }
 }/*# sourceMappingURL=main.css.map */
