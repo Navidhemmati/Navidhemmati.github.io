@@ -12,18 +12,23 @@ nav{
     flex-direction: column;
     height: 140px;
     background-color: $natural-900;
-  
 }
 .container{
+    position: relative;
+    top: 10px;
     @include flex;
     flex-direction: row-reverse;
- justify-content: space-around;
-    
+ justify-content: space-between;
+padding: 0 40px 0 40px;   
+}
+.menu{
+    width: 60px;
+    height: 50px;
+    border-radius: 12px;
+    @include flex;
+    background-color: $natural-800;
 }
 .search{
-    margin-top: $spacing-4;
-    margin-bottom:68px ;
-    
     @include flex;
     justify-content: space-between;
     width: 380px;
@@ -31,6 +36,7 @@ nav{
     border-radius: 12px;
     background-color: $natural-800;
     input{
+        direction: rtl;
        padding-left: $spacing-11;
         background-color: $natural-800;
         &::placeholder{
@@ -45,11 +51,6 @@ nav{
     }
 }
 
-.logo-nav{
-    margin-bottom:$spacing-5;
-    padding-left: 10%;
-
-}
 
 .name{
     cursor: pointer;
@@ -61,7 +62,6 @@ nav{
     @include flex;
     flex-direction: row-reverse;
     justify-content: space-evenly;
-    margin-bottom: 39px;
     span{
         font-size: 14px;
         line-height: 22.4px;
@@ -70,9 +70,8 @@ nav{
         width: 0.1px;
         height: 22px;
         background-color: $grey-300;
-        
      }
-        
+     
 }
 .basket{
     cursor: pointer;
@@ -81,51 +80,43 @@ nav{
     background-color: $natural-800;
     border-radius: 12px;
     @include flex;
-    margin-bottom: 38PX;
     margin-right: 13PX;
-    
+}
+.right-navbar{
+    display: flex;
+    flex-direction: row-reverse;
+    column-gap: 10px;
 }
 .left-navbar{
     @include flex
 }
 .index{
-    @include flex;
-   flex-direction: row-reverse;
    color: $grey-300;
-   position: absolute;
-   top: 75%;
-   left: 35%;
+   position: relative;
    cursor: pointer;
+   top: 20px;
+   display: flex;
+   justify-content: center;
+   column-gap: 15px;
   
    a{
-margin-left: 14px;
 font-size: 14px;
 font-weight: 400;
 line-height: 24px;
-letter-spacing: 0px;
-text-align: right;
-
    }
     
 }
 // end navbar
 // start  up.section
 .up-section{
-    height: 772px;
+direction: rtl;
 }
 .badge {
-    cursor: pointer;
-    font-family: sans-serif;
-    background-image: linear-gradient( #FDFBFC 100% , #FAF1FF 100%);
-    height: 47px;
-width: inherit;
-left: 0px;
-top: 140px;
-text-align: right;
-padding-top: 12px;
-padding-bottom: 12px;
-padding-right: 100px;
-color:$natural-600 ;
+cursor: pointer;
+background-image: linear-gradient( #FDFBFC 100% , #FAF1FF 100%);
+height: 47px;
+padding: 12px 40px;
+color:$natural-600;
 font-weight: 400;
 font-size: 14px;
 Line-height:22.4px;
@@ -136,32 +127,26 @@ Line-height: 22.4px;
 font-weight:bold;
 
 }
-span{
-    margin-left: 12px;
-}
 }
 .section-kadoxa{
   background-image:linear-gradient(to left, #ECFBFD 0% , #FDFBFC 51.56% , #FAF1FF 100%);
-  width: inherit;
-  height: 725px;
+  height: 765px;
   display: grid;
-  grid-template-columns: repeat(2 , 1fr); 
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
   direction : rtl;
+  padding-right: 60px;
+  column-gap: 50px;
 }
+
 .right-section{
-    width: -50%;
-    position: relative;
-    direction: rtl;
- 
-    
+    display: flex;
+    column-gap: 20px;
 }
 .slide{
-    position: absolute;
     @include flex;
     flex-direction: column;
     row-gap: 25px;
-    margin-right: 17%;
-    bottom: 40px;
     cursor: pointer;
     img{
         border-radius: 12px;
@@ -169,10 +154,10 @@ span{
         height: 100px;
     }
     :first-child{
-        margin-bottom: 35px;
+        margin-bottom: 25px;
     }
     :last-child{
-        margin-top: 35px;
+        margin-top: 25px;
     }
 
 }
@@ -183,8 +168,6 @@ span{
     width: 581px;
     height: 581px;
     border-radius: 12px;
-    margin-right: 32%;
-    margin-top: 8.5%;
     
    }
 
@@ -194,32 +177,29 @@ span{
     cursor: pointer;
     position: absolute;
     z-index: 20;
-    margin-right: 290px;
-    margin-top: 9%;
-    svg{
+    gap: 8px;
     @include flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
+    margin:15px 15px 0 0;
+    svg{
     width: 48px;
     height: 48px ;
     background-color:#ffffff ;
     border-radius: 12px;
-    margin-top: 10px;
     }
 }
 .left-section{
-  transform: translateX(25%);
+    direction: rtl;
     text-align: right;
-    font-family: sans-serif;
-    @include flex;
+   display: flex;
     flex-direction: column;
+    row-gap: 25px;
     h2{
-       
         font-style: bold;
         color: $natural-900;
         font-size: 28px;
         line-height: 44.8px;
         text-align: right;
-
     }
 }
 .star-comment{
@@ -227,25 +207,24 @@ span{
     flex-direction: row-reverse;
     text-align: center;
     column-gap:15px;
-    margin-top: 10px;
-    margin-left: 12%;
+  justify-content: start;
 }
 .star{
- 
+    @include flex;
     width: 123px;
     height: 31px;
     background-color:$grey-200 ;
     border-radius: 8px;
 }
 .comment{
+    @include flex;
     width: 75px;
     height: 31px;
     border-radius: 8px;
     background-color:$grey-200 ;
 }
 .text-pallet{
-    margin-top: 4%;
-    margin-left: 27%;
+    
   :first-child{
     font-size: 16px;
     line-height: 25.6px;
@@ -253,10 +232,9 @@ span{
   }
 }
 .pallet{
-    margin-top: 1%;
     column-gap: 15px;
-    margin-left: 9%;
     @include flex;
+    justify-content: start;
    
     div{
         cursor: pointer;
@@ -269,11 +247,12 @@ span{
 .glass{
     border: 1px solid grey;
 }
-.green{
+.green{position: relative;
     background-color: $Success-500;
     svg{
- transform: translateX(-7px) translateY(4px);
-    
+        position: absolute;
+        right: 6px;
+        top: 6px;
     }
 }
 .blue{
@@ -286,8 +265,7 @@ span{
     background-color: $danger-500;
 }
 .text-size{
-    margin-top: 2%;
-    margin-left: 23%;
+   
     :first-child{
         font-size: 16px;
         line-height: 25.6px;
@@ -295,11 +273,9 @@ span{
       }
 }
 .box-sizing{
-   
-    margin-top: 1%;
     column-gap: 15px;
-    margin-left: 8%;
     @include flex;
+    justify-content: right;
     div{
         cursor: pointer;
         width:32px ;
@@ -316,7 +292,6 @@ transform: translateY(4px);
 }
 .details{
     margin-top: 2%;
-    margin-left: 18%;
     color: $natural-900;
      :first-child{
     font-size: 16px;
@@ -339,11 +314,13 @@ transform: translateY(4px);
 }
 .price-tag{
     @include flex;
-    margin-top: 75px;
-    margin-right: 6%;
+ justify-content: start;
+ column-gap: 40px;
 }
 .offer{
     @include flex;
+    justify-content: space-evenly;
+    
 }
 
 
@@ -354,7 +331,6 @@ transform: translateY(4px);
     @include tag-button;
     @include flex;
     flex-direction: row;
-    margin-right: 20px;
    }
    svg{
     padding-right: 7px;
@@ -362,7 +338,7 @@ transform: translateY(4px);
 
 }
 .offer{
-    margin-right: 52px;
+
     :first-child{
         margin-left: 5px;
         color: $natural-400;
@@ -388,32 +364,34 @@ transform: translateY(4px);
     font-weight: 700;
     font-size: 28px;
     color: $natural-900;
-    margin-right: 35px;
+  
 }
 // end up-
 
 // start description-section
 .description{
-    height: 772px;
-    width: 1740px;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
+    height: 572px;
+    padding: 0 50px 0 50px;
     direction: rtl;
     background-color:  #fafafa;
+    display: grid;
+    justify-content: center;
+    align-items: center;
 }
+
 .description-commodity{
-   margin-top: 80px;
-   margin-right: 150px;
-   display: flex;
-   flex-direction: column;
-   row-gap: 240px;
-   div{
-    position: relative;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 29px;
-   }
+    display: grid;
+    grid-template-columns: 400px 1fr;
+}
+.commodity{
+font-size: 18px;
+font-weight: bold;
+
+}
+.lorem-description{
+    color:$natural-700;
+    font-size: 14px;
+    line-height: 22px;
 }
 .underline{
     position: absolute;
@@ -422,43 +400,44 @@ transform: translateY(4px);
     background-color: $primary-500;
     margin-top: 5px;
 }
-.lorem-description-commodity{
-  width: 1044px;
-    margin-left: 120px;
-    margin-top: 80px;
-    text-align: justify;
-    display: flex;
-    flex-direction: column;
-span{
-    text-align: justify;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 28px;
-    color: $natural-900;
-    font-style: normal;
-}   
-}
+
 .public-commodity{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    margin-top: 70px;
+    grid-template-columns: repeat(3,400px);
+}
+.public-title{
+display: flex;
+flex-direction: column;
 }
 .occasion-commodity{
-    @include flex;
-    margin-top: 13%;
-    justify-content: right;
-    gap: 16px;
+    display: grid;
+    grid-template-columns: 400px 1fr;
+}
+.occasion-lorem{
+display: flex;
+column-gap: 16px;
     span{
+        padding: 5px 10px 5px 10px;
+        text-align: center;
         border: 1px solid $natural-700;
-        border-radius: 33px;
-        padding: 3px 10px 3px 10px;
-      
-      color: $natural-900;
-      font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 22px;
-@include flex;
+        border-radius:33px;
+        color:$natural-700;
+        font-size: 14px;
+        line-height: 22px;
+
+    }
+    :first-child{
+        span{
+            width:215px ;
+            height: 32px;
+        }
+       
+    }
+    :last-child{
+       span{
+        width:144px ;
+        height: 32px;
+       }
     }
 }
 // end description-section
@@ -467,46 +446,38 @@ line-height: 22px;
     position: relative;
     height: 586.4px;
     background-color: #F2F4F5;
-    @include flex;
 }
 .cards-products{
-    width: 1440px;
     height: 442.4px;
-    @include flex;
-    gap: 32px;
-    flex-direction: row-reverse;
+   display: grid;
+   grid-template-columns: repeat(5,1fr);
+ justify-content: center;
 }
+
 .cards{
    @include flex;
     flex-direction: column;
+    text-align: center;
+    font-size: 14px;
+    line-height: 22.4px;
+    font-weight: 500;
     img{
+        max-width: 100%;
         border-radius: 16px;
         width: 262px;
         height: 262px;
-        margin-bottom: 10px;
-    }
-    :first-child{
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 22px;
-color: $natural-900;
-    }
-    :last-child{
-        font-style: normal;
-font-weight: 700;
-font-size: 16px;
-line-height: 26px;
     }
 }
 .similar-product{
-   margin-bottom: 23%;
-   margin-left: 7%;
-    position: absolute;
-        font-style: normal;
+    font-size: 24px;
+    line-height: 38.4px;
     font-weight: 700;
-    font-size: 50px;
-    line-height: 38px;
+    display: flex;
+    justify-content: end;
+    position: relative;
+    top: 35px;
+    right: 35px;
+
 }
 // end products section
 
@@ -514,27 +485,29 @@ line-height: 26px;
 .user{
     height: 573px;
     background-color:#fafafa ;
+   @include flex;
+   justify-content: space-around;
+    flex-direction: row-reverse;
+    padding: 0px 60px 0px 60px;
 }
 .view-right{
-    margin-right: 10%;
-    padding-top: 5%;
-    display: flex;
-    flex-direction: column;
     direction: rtl;
+    margin-bottom: 14%;
 
 }
 .view-user{
-    margin-bottom: 50px;
+    margin-bottom: 8%;
 font-style: normal;
 font-weight: 700;
 font-size: 18px;
 line-height: 29px;
+
 }
 .star-user {
     width: 251px;
     height: 46px;
-    transform: translateX(35px);
     @include flex;
+    justify-content: right;
     gap: 10px;
     background-color: #fafafa;
     
@@ -580,10 +553,6 @@ margin-top: 30px;
         @include new-view;
         margin-top: 10px;
     }
-}
-.view-left{
-    margin-left: 11%;
-  transform: translateY(-235px);
 }
 .view-left-box1{
     width: 1044px;
@@ -697,24 +666,24 @@ footer{
     background-color: $gray-100;
 }
 .kadoxa{
-    font-family: sans-serif;
-   width: 1440px;
-    height: 360px;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    margin: auto;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
+    height: 360px;
+
 }
 .about-kadoxa{
+
     width: 584px;
     height: 232px;
     text-align: right;
     padding: 24px, 0px, 24px, 72px;
-    Font-style: Regular;
     Font-size: 14px;
     Line-height: 28px;
     font-weight: 400;
-    margin-left: 12%;
+}
+.footer-kadoxa{
+    display: flex;
 }
 .services{
     text-align: right;
@@ -722,6 +691,7 @@ footer{
     line-height: 22px;
     font-weight: 400;
     color: $natural-700;
+    margin-bottom: 40px;
     ul{
         :first-child{
             font-size: 16px;
@@ -732,18 +702,17 @@ footer{
             
         }
         li{
-            margin-bottom: 10px;
+            
         }
     }
 }
 .with-kadoxa{
     text-align: right;
-    text-align: right;
     font-size: 14px;
     line-height: 22px;
     font-weight: 400;
     color: $natural-700;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
     ul{
         :first-child{
             font-size: 16px;
@@ -751,10 +720,7 @@ footer{
             line-height: 28px;
             font-weight: 700;
             color: $natural-900;
-            
-        }
-        li{
-            margin-bottom: 10px;
+           
         }
     }
 }
@@ -770,7 +736,7 @@ footer{
     font-weight: 700;
     color: $natural-900;
     span{
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 }
 .social{
@@ -792,10 +758,149 @@ footer{
     column-gap: 30px;
 }
 // end footer
+@media (max-width:1000px) {
 
-@media screen and (max-width:1199.98px){
     body{
-        width: 1440px;
+      max-width: 100%;
+    }
+    .index{
+        display: none;
+    }
+    .search{
+        direction: rtl;
+       width: 60px;
+        input{
+            display: none;
+        }
+    } 
+
+
+    .name{
+        width: 60px;
+        span{
+            display: none;
+        }
+        .space-line{
+    display: none;
+        }
+       } 
+
+.up-section{
+    height: 1350px;
+}
+       .section-kadoxa{
+        height: 1350px;
+        display: grid;
+        grid-template-columns: 1fr;
+        .left-section{
+            display: grid;
+            justify-content: center;
+        }
+    }
+.commodity{
+  display: flex;
+  justify-content: center;
+}
+.underline{
+    display: none;
+}
+
+.products{
+    height: 1050px;
+}
+.similar-product{
+    margin-bottom: 7%;
+
+}
+    .cards-products{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .description{
+        height: 800px;
+        row-gap: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+    .description-commodity{
+        row-gap: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+    .public-commodity{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+    }
+    .public-title{
+        gap: 20px;
+    }
+    .occasion-commodity{
+        row-gap: 30px;
+        display: flex;
+        flex-direction: column;
+        .occasion-lorem{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        }
+    }
+    .user{
+        height: 900px;
+display: flex;
+flex-direction: column;
+    justify-content: center;
+    align-items: center;
+flex-wrap: wrap;
+    }
+    .lorem-user{
+      span{
+        display: flex;
+      flex-wrap: wrap;
+      width:500px;
+      }
+    
+    }
+    .date{
+        display: none;
+      }
+    .view-left-box1,.view-left-box2,.view-left-box3{
+        width: 600px;
+        height: fit-content;
+        max-width: 100vw;
+    }
+    .kadoxa{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        height: 550px;
+    }
+    .footer-kadoxa{
+        display: flex;
+        justify-content: space-between;
+        column-gap: 20px;
+
+    }
+    .social{
+        span{
+            font-size: 9px;
+            padding-right: 10px;
+        }
+       
+    }
+    .badge{
+        width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     }
     
 }
+@media(min-width:1000px){
+    .menu{
+        display: none;
+    }
+}
+
